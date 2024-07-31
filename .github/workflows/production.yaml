@@ -1,0 +1,21 @@
+name: Hugo Serve
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  serve:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Hugo server
+        uses: fifsky/ssh-action@master
+        with:
+          command: |
+            cd app/
+            git pull https://github.com/bimosyah/project-frontend.git
+            killall hugo
+            hugo serve --port 8081 &
+          host: ${{ secrets.SERVER_HOST }}
+          user: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_KEY }}
