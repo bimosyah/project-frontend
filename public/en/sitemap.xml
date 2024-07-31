@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:8081/</loc>
+    <lastmod>2024-07-16T16:08:08+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:8081/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fa"
+                href="http://localhost:8081/fa/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:8081/"
+                />
+  </url><url>
+    <loc>http://localhost:8081/posts/</loc>
+    <lastmod>2024-07-16T16:08:08+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:8081/categories/</loc>
+  </url><url>
+    <loc>http://localhost:8081/series/</loc>
+  </url><url>
+    <loc>http://localhost:8081/tags/</loc>
+  </url>
+</urlset>
