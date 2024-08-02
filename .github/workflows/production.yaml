@@ -15,6 +15,7 @@ jobs:
           user: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_KEY }}
           command: |
+            cd app/
             git pull https://github.com/bimosyah/project-frontend.git
-            bash -c 'chmod +x deploy/server-stop.sh && ./deploy/server-stop.sh'
-            bash -c 'chmod +x deploy/server-start.sh && ./deploy/server-start.sh'
+            chmod +x deploy/server-stop.sh && ./deploy/server-stop.sh
+            chmod +x deploy/server-start.sh && ./deploy/server-start.sh
