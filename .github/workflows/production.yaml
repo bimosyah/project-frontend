@@ -11,11 +11,10 @@ jobs:
       - name: Run Hugo server
         uses: fifsky/ssh-action@master
         with:
-          command: |
-            cd app/
-            git pull https://github.com/bimosyah/project-frontend.git
-            killall hugo
-            hugo serve --port 8081 &
           host: ${{ secrets.SERVER_HOST }}
           user: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_KEY }}
+          command: |
+            git pull https://github.com/bimosyah/project-frontend.git
+            bash -c 'chmod +x deploy/server-stop.sh && ./deploy/server-stop.sh'
+            bash -c 'chmod +x deploy/server-start.sh && ./deploy/server-start.sh'
