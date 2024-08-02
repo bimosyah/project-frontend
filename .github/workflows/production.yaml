@@ -18,4 +18,4 @@ jobs:
             cd app/
             git pull https://github.com/bimosyah/project-frontend.git
             chmod +x deploy/server-stop.sh && ./deploy/server-stop.sh
-            chmod +x deploy/server-start.sh && ./deploy/server-start.sh
+#            chmod +x deploy/server-start.sh && ./deploy/server-start.sh
