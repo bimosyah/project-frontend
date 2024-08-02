@@ -17,6 +17,7 @@ jobs:
           command: |
             cd app/
             git checkout master
+            git reset --hard origin/master
             git pull
             chmod +x deploy/server-stop.sh && ./deploy/server-stop.sh
             chmod +x deploy/server-start.sh && ./deploy/server-start.sh
